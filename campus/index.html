@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>キャンパススクエア</title><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#163468">
+<link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-180.png">
+<style>body{margin:0;font-family:sans-serif;background:#163468;color:#fff;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center}
+.box{padding:24px;line-height:1.8;font-size:15px} a{color:#fff}</style></head>
+<body><div class="box" id="box">開いています…</div>
+<script>
+var TARGET = "https://cs.okiu.ac.jp/campusweb/";
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(function(){});
+var app = window.matchMedia("(display-mode: standalone)").matches || navigator.standalone;
+if (app) {
+  location.replace(TARGET);   // 履歴に残さない＝戻るでそのままアプリが閉じる
+} else {
+  document.getElementById("box").innerHTML = "<b>キャンパススクエア</b> の入口です。<br>Chrome の「⋮」→「ホーム画面に追加」→「インストール」で<br>ホーム画面に置いてから開いてください。<br><br><a href='" + TARGET + "'>今すぐこのタブで開く</a>";
+}
+</script></body></html>
