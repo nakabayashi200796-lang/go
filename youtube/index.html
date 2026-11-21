@@ -6,7 +6,7 @@
 .box{padding:24px;line-height:1.8;font-size:15px} a{color:#fff}</style></head>
 <body><div class="box" id="box">開いています…</div>
 <script>
-var TARGET = "https://m.youtube.com/";
+var TARGET = "https://m.youtube.com/feed/subscriptions";
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(function(){});
 var app = window.matchMedia("(display-mode: standalone)").matches || navigator.standalone;
 if (app) {
