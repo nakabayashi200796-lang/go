@@ -12,6 +12,6 @@ var app = window.matchMedia("(display-mode: standalone)").matches || navigator.s
 if (app) {
   location.replace(TARGET);   // 履歴に残さない＝戻るでそのままアプリが閉じる
 } else {
-  document.getElementById("box").innerHTML = "<b>バスロケ</b> の入口です。<br>Chrome の「⋮」→「ホーム画面に追加」→「インストール」で<br>ホーム画面に置いてから開いてください。<br><br><a href='" + TARGET + "'>今すぐこのタブで開く</a>";
+  document.getElementById("box").innerHTML = "<b>バスロケ</b> の入口です。<br>このブラウザ（Chrome・Brave）のメニュー →「ホーム画面に追加」→「インストール」で<br>ホーム画面に置いてから開いてください。<br><br><a href='" + TARGET + "'>今すぐこのタブで開く</a>";
 }
 </script></body></html>
